@@ -1,0 +1,95 @@
+body{
+    background-color: #222;
+    font-family: sans-serif;
+    font-size: clamp(1rem, 1vw, 4rem); 
+}
+
+ul{
+    list-style: none;
+    padding: 0 1em;
+    margin: 0;
+}
+
+.title{
+    text-align: center;
+    color: #f00;
+    text-decoration: underline 2px;
+    
+}
+
+.list__item{
+    padding: 1em;
+    color: #aaa;
+    border: 1px solid #000;
+    margin: auto;
+    font-weight: bold;
+    transition: all 250ms ease;
+}
+
+.list__item:hover{
+    cursor: pointer;
+    background-color: #aa0000;
+    color: #fff;
+    transform: scale(1.02);
+    border: 1px solid #f00;
+}
+
+.table{
+    width: 100%;
+    border: 1px solid #fff;
+    background-color: #aa0000;
+    color: #fff;
+    padding: 0 1em;
+    margin: auto;
+    border-collapse: collapse; 
+    text-align: left;
+}
+
+.table__header{
+    border-bottom: 1px solid #fff;
+}
+
+.table__info, .table__column{
+    border-left: 1px solid #fff;
+}
+
+.table__info{
+    padding: 1em 0;
+}
+.table__info:first-child{
+    border-left: none;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .table__header{
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    
+    .table__row{
+        display: flex;
+        flex-direction: column;
+    }
+    .table__info{
+        position: relative;
+        border-bottom: 1px solid #fff;
+        padding-left: 6em;
+    }
+    .table__info:last-child{
+        border-bottom: none;
+    }
+    .table__info::before{
+        position: absolute;
+        left: 5px;
+    }
+    .table__info:nth-child(1)::before {content: "Username:";}
+    .table__info:nth-child(2)::before {content: "Email:";}
+    .table__info:nth-child(3)::before {content: "Street:";}
+    .table__info:nth-child(4)::before {content: "Suite:";}
+    .table__info:nth-child(5)::before {content: "City:";}
+    .table__info:nth-child(6)::before {content: "Zipcode:";}
+    .table__info:nth-child(7)::before {content: "Lat:";}
+    .table__info:nth-child(8)::before {content: "Lng:";}
+}
