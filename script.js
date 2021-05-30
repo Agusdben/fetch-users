@@ -12,7 +12,7 @@ async function getResponse(url){
             li.classList.add('list__item')
             li.innerHTML = NAME
             li.addEventListener('click', function(){
-                window.location.href = `./user.html?id=${ID}`
+                window.location.href = `./user.html?id=${ID}&user=${NAME}`
             })
             LIST.appendChild(li)
         });
