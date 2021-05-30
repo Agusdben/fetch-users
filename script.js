@@ -1,8 +1,6 @@
 const URL_JSON = 'https://jsonplaceholder.typicode.com/users'
 const LIST = document.querySelector(".list")
 const LOADER = document.querySelector(".loader")
-LOADER.style.width = "100vw"
-LOADER.style.height = "100vh"
 
 window.onload = ()=> {
     LOADER.style.display = "none"
